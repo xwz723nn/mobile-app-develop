@@ -13,7 +13,7 @@ struct first_ios_appApp: App {
     init() {
         FirebaseApp.configure()
         let ref = Database.database().reference()
-        ref.child("Name/student").setValue("Mike")
+        ref.child("Name/student").setValue("Tina")
     }
     var body: some Scene {
         
