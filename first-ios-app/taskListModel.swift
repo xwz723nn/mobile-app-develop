@@ -17,4 +17,8 @@ class TaskListModel: ObservableObject{
             TaskViewModel(task: task)
         }
     }
+    func addTask(task: Task) {
+        let taskVM = TaskViewModel(task: task)
+        self.taskViewModel.append(taskVM)
+    }
 }
