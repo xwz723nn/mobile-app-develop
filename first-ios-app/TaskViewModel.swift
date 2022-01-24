@@ -10,6 +10,7 @@ import Combine
 import simd
 class TaskViewModel: Identifiable, ObservableObject {
     @Published var task : Task
+    @Published var taskRepo = TaskRepo()
     var id = ""
     @Published var completedCircle = ""
     private var cancelMark = Set<AnyCancellable>()
@@ -22,7 +23,7 @@ class TaskViewModel: Identifiable, ObservableObject {
             .assign(to: \.completedCircle, on: self)
             .store(in : &cancelMark)
         $task
-            .map { task in
+            .compactMap { task in
                 task.id
             }
             .assign(to: \.id, on: self)

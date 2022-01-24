@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		268E882E279DF07600C4FC1A /* TaskRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E882D279DF07600C4FC1A /* TaskRepo.swift */; };
 		26B16E3E279A7F39007422BD /* first_ios_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B16E3D279A7F39007422BD /* first_ios_appApp.swift */; };
 		26B16E40279A7F39007422BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B16E3F279A7F39007422BD /* ContentView.swift */; };
 		26B16E42279A7F3B007422BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26B16E41279A7F3B007422BD /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		268E882D279DF07600C4FC1A /* TaskRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepo.swift; sourceTree = "<group>"; };
 		26B16E3A279A7F39007422BD /* first-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "first-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B16E3D279A7F39007422BD /* first_ios_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = first_ios_appApp.swift; sourceTree = "<group>"; };
 		26B16E3F279A7F39007422BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				26EDA80C279CB786007B5D45 /* TaskViewModel.swift */,
 				26EDA80E279CBA85007B5D45 /* TaskListModel.swift */,
 				26B16E4D279A7F3B007422BD /* first-ios-appTests */,
+				268E882D279DF07600C4FC1A /* TaskRepo.swift */,
 			);
 			path = "first-ios-app";
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				26EDA80F279CBA85007B5D45 /* TaskListModel.swift in Sources */,
 				26EDA80D279CB787007B5D45 /* TaskViewModel.swift in Sources */,
 				26EDA80B279CA72A007B5D45 /* Task.swift in Sources */,
+				268E882E279DF07600C4FC1A /* TaskRepo.swift in Sources */,
 				26B16E3E279A7F39007422BD /* first_ios_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
