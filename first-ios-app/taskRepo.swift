@@ -35,12 +35,20 @@ class TaskRepo: ObservableObject {
             fatalError("Error occurs")
         }
     }
-    func deleteTask(_ task : Task) {
-        do {
-            let _ = try db.collection("tasks").document(task.id!).delete()
+    func updateTask(_ task: Task) {
+        if let documentId = task.id {
+            do {
+                try db.collection("tasks").document(documentId).setData(from : task)
+            } catch {
+                fatalError("Error occurs")
+            }
         }
-        catch{
-            fatalError("cannot Delete")
+    }
+    func addOrUpdateTask(_ task: Task) {
+        if let _ = task.id {
+            self.updateTask(task)
+        } else {
+            addTask(task)
         }
     }
 }

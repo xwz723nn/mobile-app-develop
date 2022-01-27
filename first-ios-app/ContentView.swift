@@ -62,10 +62,12 @@ struct taskView: View {
     let db = Firestore.firestore()
     @ObservedObject var taskModel: TaskViewModel
     var onCommit: (Task) -> (Void) = {_ in} //don't need to have a name
+    //listen to changes
     func deleteTask(task: Task) {
         db.collection("tasks").document(task.id!).delete()
         self.taskModel.taskRepo.loadData()
     }
+
     var body: some View {
         HStack {
             Image(systemName: taskModel.task.completed ? "checkmark.circle.fill": "circle")

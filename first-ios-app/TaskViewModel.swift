@@ -28,6 +28,12 @@ class TaskViewModel: Identifiable, ObservableObject {
             }
             .assign(to: \.id, on: self)
             .store(in: &cancelMark)
+        $task
+            .debounce(for: 0.0, scheduler: RunLoop.main)
+            .sink{task in
+                self.taskRepo.updateTask(task)
+            }
+            .store(in: &cancelMark)
     }
     
 }

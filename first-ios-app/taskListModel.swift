@@ -20,16 +20,11 @@ class TaskListModel: ObservableObject{
             }
         }.assign(to: \.taskViewModel, on: self)
             .store(in : &cancelMarks)
-        print(taskViewModel)
     }
     func addTask(task: Task) {
         let taskVM = TaskViewModel(task: task)
         self.taskViewModel.append(taskVM)
-        print(task)
-        print(taskVM)
         taskRepo.addTask(task)
     }
-    func deleteTask(task: Task) {
-        taskRepo.deleteTask(task)
-    }
+    
 }
