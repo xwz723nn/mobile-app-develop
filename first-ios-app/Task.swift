@@ -13,10 +13,3 @@ struct Task: Codable, Identifiable {
     var title: String
     var completed: Bool
 }
-
-let testDataTasks = [
-    Task(title: "UI", completed: true),
-    Task(title: "connect", completed: false),
-    Task(title: "grocery", completed: false),
-    Task(title: "whatever", completed: false)
-]
