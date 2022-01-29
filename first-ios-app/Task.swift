@@ -13,3 +13,10 @@ struct Task: Codable, Identifiable {
     var title: String
     var completed: Bool
 }
+
+let testTasks = [
+    Task(title: "UI", completed: false),
+    Task(title: "quiz", completed: true),
+    Task(title: "MAS", completed: false)
+    Task(title: "test", completed: false)
+]
